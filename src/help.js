@@ -20,12 +20,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bpink
-  ├─ ❏ ${prefix}marvellogo
-  ├─ ❏ ${prefix}snowwrite
-  ├─ ❏ ${prefix}3dtext
-  ├─ ❏ ${prefix}ninjalogo
-  ├─ ❏ ${prefix}water
-  ├─ ❏ ${prefix}firetext
   ├─ ❏ ${prefix}logowolf
   ├─ ❏ ${prefix}logowolf2
   ├─ ❏ ${prefix}phlogo
