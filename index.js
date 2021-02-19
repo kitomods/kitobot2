@@ -18,13 +18,14 @@ const {
 } = require('@adiwajshing/baileys')
 
 /******BEGIN OF FILE INPUT******/
+const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
-const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
+const { limitend, limitcount } = require('./src/limit')
 /******END OF FILE INPUT******/
 
 /******BEGIN OF NPM PACKAGE INPUT******/
@@ -45,6 +46,7 @@ const speed = require('performance-now')
 /******BEGIN OF JSON INPUT******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -86,6 +88,7 @@ const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
 
 prefix = '/'
 blocked = []
+limitt = 1000000
 
 /******BEGIN OF FUNCTIONS INPUT******/
 const getLevelingXp = (userId) => {
@@ -1968,21 +1971,23 @@ case 'timer':
 					//if (anu.error) return reply('Simi ga tau kak')
 					reply(anu)
 					break
-				case 'simih':
+               case 'simih':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Hmmmm')
-					if (Number(args[0]) === 1) {
-						if (isSimi) return reply('O modo Simi está ativado')
+					if ((args[0]) === 'on') {
+						if (isSimi) return reply('O modo Simi est� ativo')
 						samih.push(from)
-						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Ativado com sucesso o modo simi neste grupo ✔️')
-					} else if (Number(args[0]) === 0) {
+						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
+						reply(`\`\`\`Sucesso ative o modo simi no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
 						samih.splice(from, 1)
-						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Desativando o modo simi com sucesso neste grupo ✔️')
+						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
+						reply(`\`\`\`Desativando o modo simi com sucesso no grupo\`\`\` *${groupMetadata.subject}*`)
 					} else {
-						reply('1 para ativar, 0 para desativar')
+						reply('On ativar, Off desabilitar')
 					}
 					break
 				case 'clone':
@@ -2047,13 +2052,16 @@ case 'timer':
 					}
 					break
 				default:
+					if (body.startsWith(`${prefix}${command}`)) {
+                  reply(`nem `)
+                  }
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+						console.log(color('[FXC7BOT]','red'), 'Comando n�o registrado', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
