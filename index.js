@@ -2053,7 +2053,7 @@ case 'timer':
 					break
 				default:
 					if (body.startsWith(`${prefix}${command}`)) {
-                  reply(`nem `)
+                  reply(`nem`)
                   }
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
