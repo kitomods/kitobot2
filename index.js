@@ -236,6 +236,8 @@ async function starts() {
 			if (mek.key.fromMe) return
 			global.prefix
 			global.blocked
+			const nameReq = insom ? mek.participant : mek.key.remoteJid
+			pushname2 = client.contacts[nameReq] != undefined ? client.contacts[nameReq].vname || client.contacts[nameReq].notify : undefined
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
@@ -341,7 +343,7 @@ async function starts() {
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, help(prefix), text)
+					client.sendMessage(from, help(prefix, pushname2), text)
 					break
                                 /*case 'makermenu':
                                         hisil = fs.readFileSync('./src/makerimg.jpg')
