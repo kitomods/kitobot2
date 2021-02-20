@@ -1312,16 +1312,16 @@ case 'timer':
 					client.sendMessage(from, anu.result.soal, text, { quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
 					break
-                                  case 'daftar':
+                                  case 'rg':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('você já está registrado')
-					if (args.length < 1) return reply(`Parâmetro incorreto \nCommand : ${prefix}daftar nome|idade\nContoh : ${prefix}daftar Toin|18`)
+					if (args.length < 1) return reply(`Parâmetro incorreto \nCommand : ${prefix}rg nome\nContoh : ${prefix}daftar kito`)
 					var reg = body.slice(8)
-					var jeneng = reg.split("|")[0];
-					var umure = reg.split("|")[1];
+					var jeneng = reg.split("/")[0];
+					var umure = reg.split("/")[1];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`O registro foi bem sucedido com SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Era]: ${umure}\`\`\`\n\`\`\`Para usar o bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `O registro foi bem sucedido com SN: TM08GK8PPHBSJDH10J\n\n[Nome]: ${jeneng}\n[Número]: wa.me/${sender.split("@")[0]}\nPara usar o bot\nPor favor\nenviar ${prefix}menu\nTotal de usuários ${user.length}`, text, {quoted: mek})
 					break
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
