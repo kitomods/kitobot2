@@ -1,4 +1,4 @@
-const help = (prefix) => {
+const help = (prefix, pushname2) => {
 	return `
   kitobot
 
