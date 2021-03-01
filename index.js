@@ -199,7 +199,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Iae @${num.split('@')[0]}\n cola no grupo vadia *${mdata.subject}*`
+				teks = `iae @${num.split('@')[0]}\nbelo nick imagina com a nossa tag\n Tag: '\n\nExemplo: '  -  ' \n\nRecado:    �,       *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -262,7 +262,7 @@ async function starts() {
 					ownerB: '[❗] Este comando só pode ser usado pelo kito! ❌',
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: '[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
-                                        daftarB: `REGISTRE-SE\nOlá\n ola vc n esta registrado,se registre, para usar o bot. \n\nComando : ${prefix}rg (nome/nick)\nExemplo : ${prefix}rg kito`,
+                                        daftarB: `REGISTRE-SE\nOlá\n ola vc n esta registrado,se registre, para usar o bot. \n\nComando : ${prefix}rg (nome/nick)\nExemplo : ${prefix}rg cerolzera`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
