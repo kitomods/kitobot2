@@ -1,6 +1,7 @@
 const help = (prefix) => {
 	return `
-   🐊🐊K҉ I҉T҉O҉B҉O҉T҉🐊🐊
+   𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 𝐁𝐀𝐒𝐄
+   
 𝗽𝗮𝗿𝗮 𝘂𝘀𝗮𝗿 𝗼 𝗯𝗼𝘁, 𝗺𝗮𝗻𝗱𝗮 ${prefix}𝗿𝗴 (𝗻𝗶𝗰𝗸)
 
 ◪ 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦
@@ -30,7 +31,6 @@ const help = (prefix) => {
 ▻${prefix}meme (a msm coisa)
 ▻${prefix}virtex (sla oq faz)
 ▻${prefix}simi (texto)
-▻${prefix}linkgrup
 ▻${prefix}listadm
      `
 }
