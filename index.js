@@ -437,7 +437,7 @@ async function starts() {
                 data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(11)}`)
                 if (data.error) return reply(data.error)
                 if (data.result) return reply(data.result)
-                hasil = `╠➥ internasional : ${data.international}\n╠➥ nomor : ${data.nomor}\n╠➥ operator : ${data.op}`
+                hasil = `╠➥ internacional : ${data.international}\n╠➥ numero : ${data.nomor}\n╠➥ operator : ${data.op}`
                 reply(hasil)
                 break
                    case 'map':
@@ -779,7 +779,7 @@ async function starts() {
 					client.sendMessage(mentioned, 'Tomonucu kskst', text)
 					}
 					break
-                 case 'linkgrupo':
+                 case 'link':
 				case 'linkgrup':
 				case 'linkgc':
 				    client.updatePresence(from, Presence.composing) 
@@ -787,7 +787,7 @@ async function starts() {
                                      if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					linkgc = await client.groupInviteCode (from)
-					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Group *${groupName}*`
+					yeh = `' |  \n\n      -,   � ,  ,    \n\n   ,    ,    ,    \n\n   �,      \n\nhttps://chat.whatsapp.com/${linkgc}`
 					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 					break
 				case 'ocr':
