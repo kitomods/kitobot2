@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-   𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 𝐁𝐀𝐒𝐄
+   𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 
    
 𝗽𝗮𝗿𝗮 𝘂𝘀𝗮𝗿 𝗼 𝗯𝗼𝘁, 𝗺𝗮𝗻𝗱𝗮 ${prefix}𝗿𝗴 (𝗻𝗶𝗰𝗸)
 
@@ -8,7 +8,6 @@ const help = (prefix) => {
   ❏ Prefix: 「  ${prefix}  」
   ❏ Criador : K҉ I҉T҉O҉
   ❏${prefix}criador
-  ❏${prefix}report (o bug q vc deseja reportar)
   ❏${prefix}criadorgrupo
   
 ◪𝗠𝗘𝗡𝗨𝗦
@@ -17,7 +16,6 @@ const help = (prefix) => {
   ❏${prefix}menuadmin
   ❏${prefix}menulinks (agr ta com imunes novos)
 ◪ 𝗙𝗔𝗭𝗘𝗥
-▻${prefix}report (chama o dono 
 ▻${prefix}idiomas (idiomas do comando ${prefix}/tts)
 ▻${prefix}wiki (olha na wikipedia em indonesio)
 ▻${prefix}imagem (transforma fig em imagem)
