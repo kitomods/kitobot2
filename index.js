@@ -24,6 +24,7 @@ const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
 const { fetchJson } = require('./lib/fetcher')
+const { tag } = require('./src/tag')
 const { menulinks } = require('./src/menulinks')
 const { recognize } = require('./lib/ocr')
 /******END OF FILE INPUT******/
@@ -808,7 +809,10 @@ async function starts() {
 						reply('Foto aja mas')
 					}
 					break
-
+             case 'tag':
+					if (!isGroup) return reply(mess.only.group)
+					client.sendMessage(from, menulinks(prefix, sender), text, {quoted: mek})
+				  break
 		    case 'menulinks':
 					if (!isGroup) return reply(mess.only.group)
 					client.sendMessage(from, menulinks(prefix, sender), text, {quoted: mek})
