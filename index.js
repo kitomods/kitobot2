@@ -957,7 +957,7 @@ async function starts() {
                                 case 'bemvindo':
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
-					if (!isGroupAdmins) return reply(mess.only.Badmin)
+					if (!isOwner) return reply(mess.only.ownerB)
 					if (args.length < 1) return reply('digite 1 para ativar')
 					if (Number(args[0]) === 1) {
 						if (isWelkom) return reply('o recurso está ativo')
