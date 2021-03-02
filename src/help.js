@@ -1,7 +1,8 @@
 const help = (prefix) => {
 	return `
    𝐖𝐞𝐡𝐫𝐦𝐚𝐜𝐡𝐭'𝐗𝐒 | ϟϟ 
-   
+   ${prefix}tag
+   ${prefix}link
 𝗽𝗮𝗿𝗮 𝘂𝘀𝗮𝗿 𝗼 𝗯𝗼𝘁, 𝗺𝗮𝗻𝗱𝗮 ${prefix}𝗿𝗴 (𝗻𝗶𝗰𝗸)
 
 ◪ 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦
@@ -16,6 +17,7 @@ const help = (prefix) => {
   ❏${prefix}menuadmin
   ❏${prefix}menulinks (agr ta com imunes novos)
 ◪ 𝗙𝗔𝗭𝗘𝗥
+
 ▻${prefix}idiomas (idiomas do comando ${prefix}/tts)
 ▻${prefix}wiki (olha na wikipedia em indonesio)
 ▻${prefix}imagem (transforma fig em imagem)
