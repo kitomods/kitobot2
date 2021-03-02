@@ -1,6 +1,6 @@
 const kitomenu = (prefix, pushname) => {
     return `
-comandos do 𝑲𝐈𝐓𝐎
+comandos do 𝑲𝐈𝐓𝐎'𝐗𝐒
 
 ▻${prefix}prefixo
 ▻${prefix}block
