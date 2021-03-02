@@ -16,7 +16,6 @@ const menuadmin = (prefix, pushname) => {
 ▻${prefix}kick @
 ▻${prefix}ping
 ▻${prefix}level
-▻${prefix}link
  `
 
 
